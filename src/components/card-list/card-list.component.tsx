@@ -1,8 +1,14 @@
 import { Component } from 'react';
 import Card from '../card/card.components';
 import './card-list.styles.css';
+import React from 'react';
+import { Monster } from '../../App';
 
-class CardList extends Component {
+type CardListProps = {
+    monsters: Monster[];
+}
+
+class CardList extends Component<CardListProps> {
     render() {
         const { monsters } = this.props;
 
